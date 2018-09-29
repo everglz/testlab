@@ -16,6 +16,20 @@ pipeline {
         input(message: 'Aprobar', submitter: 'everglz')
       }
     }
+    stage('Commit') {
+      parallel {
+        stage('Commit') {
+          steps {
+            bat 'C:\\Users\\Cleber\\Desktop\\Jenkins\\test.bat'
+          }
+        }
+        stage('SendMail') {
+          steps {
+            emailext(subject: 'Aprobar Commit', to: 'laugza', body: 'Favor de Aprobar el Commit', attachLog: true)
+          }
+        }
+      }
+    }
   }
   triggers {
     cron('H 15 * * *')
