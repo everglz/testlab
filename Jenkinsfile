@@ -8,11 +8,11 @@ pipeline {
     }
     stage('SendMail') {
       steps {
-        emailext(subject: 'Compilación', attachLog: true, body: 'Se requiere la Aprobación', to: 'everglz')
+        emailext(subject: 'CompilaciÃ³n', attachLog: true, body: 'Se requiere la AprobaciÃ³n', to: 'everglz')
       }
     }
   }
   triggers {
-    cron('H 3 * * *')
+    cron('H 15 * * *')
   }
 }
