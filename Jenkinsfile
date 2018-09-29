@@ -20,7 +20,7 @@ pipeline {
       parallel {
         stage('Commit') {
           steps {
-            bat 'C:\\Users\\Cleber\\Desktop\\Jenkins\\test.bat'
+            bat 'C:\\Users\\Cleber\\Desktop\\Jenkins\\build.bar'
           }
         }
         stage('SendMail') {
