@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        bat 'C:\\Users\\Cleber\\Desktop\\Jenkins\\install.bat'
+        bat 'https://github.com/everglz/testlab/blob/master/install.bat'
       }
     }
   }
